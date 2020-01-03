@@ -133,7 +133,7 @@ async function processImages (images, config) {
 
       writeLine(`Processing images (${totalAssets} images) - ${Math.round((++progress) * 100 / totalJobs)}%`)
     }, {
-      concurrency: 2
+      concurrency: 1
     })
   } catch (err) {
     worker.end()
