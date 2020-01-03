@@ -113,6 +113,6 @@ exports.process = async function ({ queue, context, cacheDir, backgroundColor })
       throw new Error(`Failed to process image ${relPath}. ${err.message}`)
     }
   }, {
-    concurrency: sysinfo.cpus.logical
+    concurrency: 2
   })
 }
