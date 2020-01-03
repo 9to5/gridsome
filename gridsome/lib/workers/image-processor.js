@@ -107,6 +107,8 @@ exports.process = async function ({ queue, context, cacheDir, backgroundColor })
         backgroundColor,
         cachePath,
         ...set
+      }).catch(err => {
+        console.error(err)
       })
     } catch (err) {
       const relPath = path.relative(context, set.filePath)
