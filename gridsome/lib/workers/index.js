@@ -7,7 +7,7 @@ function createWorker (filename) {
   const workerPath = require.resolve(filepath)
 
   return new Worker(workerPath, {
-    numWorkers: sysinfo.cpus.physical,
+    numWorkers: 2,
     forkOptions: {
       stdio: ['pipe', 'pipe', process.stderr, 'ipc']
     }
