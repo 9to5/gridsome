@@ -242,7 +242,7 @@ class WordPressSource {
         } catch (err) {
           console.log(err.message)
         }
-      }, { concurrency: concurrent })
+      }, { concurrency: 1 })
 
       resolve(res.data)
     })
