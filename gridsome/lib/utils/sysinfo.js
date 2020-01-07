@@ -5,7 +5,7 @@ const cpus = os.cpus()
 module.exports = {
   cpus: {
     model: cpus.length ? cpus[0].model : '',
-    logical: cpus.length,
-    physical: physical || 1
+    logical: 1,
+    physical: 1
   }
 }
