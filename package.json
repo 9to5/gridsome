@@ -1,6 +1,4 @@
 {
-  "version": "0.7.13",
-  "name": "9to5gridsome",
   "private": true,
   "workspaces": [
     "gridsome",
