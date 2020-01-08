@@ -28,8 +28,8 @@ exports.processImage = async function ({
 
   if (['.png', '.jpeg', '.jpg', '.webp'].includes(ext)) {
     const config = {
-      pngCompressionLevel: parseInt(options.pngCompressionLevel, 10) || 9,
-      quality: parseInt(options.quality, 10) || 75,
+      pngCompressionLevel: 9,
+      quality: 50,
       width: parseInt(options.width, 10) || null,
       height: parseInt(options.height, 10) || null,
       jpegProgressive: true
