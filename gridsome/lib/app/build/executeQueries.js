@@ -54,7 +54,7 @@ async function executeQueries (renderQueue, { context, pages, schema, graphql },
     }
 
     return { dataOutput: entry.dataOutput, data: results }
-  }, { concurrency: 1 })
+  }, { concurrency: sysinfo.cpus.physical })
 
   info(`Execute GraphQL (${renderQueue.length} queries) - ${timer(hirestime.S)}s`)
 

@@ -107,14 +107,12 @@ exports.process = async function ({ queue, context, cacheDir, backgroundColor })
         backgroundColor,
         cachePath,
         ...set
-      }).catch(err => {
-        console.error(err)
       })
     } catch (err) {
       const relPath = path.relative(context, set.filePath)
       throw new Error(`Failed to process image ${relPath}. ${err.message}`)
     }
   }, {
-    concurrency: 1
+    concurrency: sysinfo.cpus.logical
   })
 }
