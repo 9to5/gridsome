@@ -7,7 +7,7 @@ function createWorker (filename) {
   const workerPath = require.resolve(filepath)
 
   return new Worker(workerPath, {
-    numWorkers: 2,
+    numWorkers: 1,
     forkOptions: {
       stdio: ['pipe', 'pipe', process.stderr, 'ipc']
     }
