@@ -9,6 +9,7 @@ function warmupSharp (sharp) {
   const buffer = Buffer.from(svg, 'utf-8')
 
   sharp.simd(true)
+  sharp.concurrency(1)
 
   isWarming = sharp(buffer).metadata().then(() => sharp, () => sharp)
 
